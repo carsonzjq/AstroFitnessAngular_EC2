@@ -15,7 +15,7 @@
     <div class="form-group">
       <label for="branch" class="control-label" style="color:white">Time</label>
       <select class="form-control" id="branch" name="branch" [(ngModel)]="client.client_gym" 
-      #branch="ngModel" (change)="checkBranch()">
+      #branch="ngModel">
         <option *ngFor="let bran of branches" [value]="bran.id">{{bran.name}}, {{bran.address}}</option>
       </select>
     </div>
