@@ -12,6 +12,7 @@ import { Appointements } from '../appointements';
 })
 export class AppointmentsComponent implements OnInit {
 
+	branches;
 	client = new Client();
 	trainers;
 	url = "http://54.144.236.210:8085/AstroFitness/rest/appointment/get/" + sessionStorage.getItem("userEmail");
@@ -25,6 +26,7 @@ export class AppointmentsComponent implements OnInit {
 			)
 	}
 
+	submit(){}
 	fetchTrainers(){
 		this.url="http://54.144.236.210:8085/AstroFitness/rest/appointment/get/all";
 		this.http.get(this.url).subscribe(

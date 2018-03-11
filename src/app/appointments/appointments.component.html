@@ -8,7 +8,7 @@
     <div class="form-group">
       <label for="branch" class="control-label" style="color:white">Trainer</label>
       <select class="form-control" id="branch" name="branch" [(ngModel)]="client.client_gym" 
-      #branch="ngModel" (change)="checkBranch()">
+      #branch="ngModel">
         <option *ngFor="let bran of branches" [value]="bran.id">{{bran.name}}, {{bran.address}}</option>
       </select>
     </div>
@@ -20,7 +20,7 @@
       </select>
     </div>
     <div class="form-group">  <!-- submit -->
-      <button type="submit" class="btn btn-default" (click)="check()" [disabled]="!registerForm.form.valid">Submit</button>
+      <button type="submit" class="btn btn-default" [disabled]="!registerForm.form.valid">Submit</button>
     </div>
   </form>
 </div>

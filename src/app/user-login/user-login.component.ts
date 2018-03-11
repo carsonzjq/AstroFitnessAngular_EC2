@@ -17,9 +17,9 @@ export class UserLoginComponent implements OnInit {
 
   constructor(private router: Router, private user: UserService) { }
 
-  private email: string;
-  private password: string;
-  private invalidCredential: boolean;
+  email: string;
+  password: string;
+  invalidCredential: boolean;
 
   ngOnInit() {
     console.log(this.user.getLoggedIn());
