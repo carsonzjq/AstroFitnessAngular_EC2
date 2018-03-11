@@ -1,0 +1,26 @@
+<div class="jumbotron text-center" style="background-color:#7BD5C6">
+  <div><h2>You are signed up for the following appointments:</h2></div>
+  
+</div>
+<div class="container" style="width:500px; background-color:#7BD5C6">
+  <h2 style="color:white; text-align:center">Sign up for a training session</h2>
+  <form data-toggle="validator" role="form" method="POST" (ngSubmit)="submit()" #registerForm="ngForm">
+    <div class="form-group">
+      <label for="branch" class="control-label" style="color:white">Trainer</label>
+      <select class="form-control" id="branch" name="branch" [(ngModel)]="client.client_gym" 
+      #branch="ngModel" (change)="checkBranch()">
+        <option *ngFor="let bran of branches" [value]="bran.id">{{bran.name}}, {{bran.address}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="branch" class="control-label" style="color:white">Time</label>
+      <select class="form-control" id="branch" name="branch" [(ngModel)]="client.client_gym" 
+      #branch="ngModel" (change)="checkBranch()">
+        <option *ngFor="let bran of branches" [value]="bran.id">{{bran.name}}, {{bran.address}}</option>
+      </select>
+    </div>
+    <div class="form-group">  <!-- submit -->
+      <button type="submit" class="btn btn-default" (click)="check()" [disabled]="!registerForm.form.valid">Submit</button>
+    </div>
+  </form>
+</div>

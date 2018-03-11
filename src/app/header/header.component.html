@@ -1,0 +1,52 @@
+<div *ngIf="loggedIn; else out" >
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+
+			<div *ngIf="accountType=='client'">
+				<div class="navbar-header">
+					<a class="navbar-brand" routerLink="client-page">AstroFitness</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a routerLink="client-page">Home</a></li>
+          			<li><a routerLink="appointments">Appointments</a></li>
+				</ul>
+			</div>
+			<div *ngIf="accountType=='trainer'">
+				<div class="navbar-header">
+					<a class="navbar-brand" routerLink="trainer-page">AstroFitness</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a routerLink="trainer-page">Home</a></li>
+				</ul>
+			</div>
+
+			<div *ngIf="accountType=='manager'">
+				<div class="navbar-header">
+					<a class="navbar-brand" routerLink="manager-page">AstroFitness</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a routerLink="manager-page">Home</a></li>
+				</ul>
+			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li (click)="logout()"><a routerLink="home"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+			</ul>
+		</div>
+	</nav>
+</div>
+<ng-template #out>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" routerLink="home">AstroFitness</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a routerLink="home">Home</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a routerLink="sign-up"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+				<li><a routerLink="user-login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			</ul>
+		</div>
+	</nav>
+</ng-template>

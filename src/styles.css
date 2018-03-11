@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+@charset "UTF-8";
+body{
+    text-decoration-style: none;
+    font-size: medium;
+    
+}
+
+.sign-In-Up {
+	width:55%;
+	margin-left:25%;
+	margin-top: 100px;
+    background-color: rgb(158, 164, 165);
+    padding: 2%;
+
+}
+
+ .footul {
+    padding-top: 10px;
+    list-style-type: none;
+ 
+ }
+ a {
+     lighting-color: seagreen;
+     color:rgb(49, 54, 38);
+     text-decoration: none;
+     
+ }
+a:hover{
+    text-decoration-line: none;
+    color: rgb(221, 210, 114);
+    
+}

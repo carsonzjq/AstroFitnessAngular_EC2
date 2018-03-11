@@ -1,0 +1,49 @@
+  <div class="well"  class="sign-In-Up">
+  
+   <h2 style="text-align:center">AstroFitness AdminLogin</h2>
+   <form #adminLogin="ngForm" (ngSubmit)="onSubmit(adminLogin.value)">
+  <table id="tab1">
+   <tr>
+     <th style="width:45%; align-content: center; padding:2%;">Admin Login &nbsp;&nbsp; </th>
+     <td><p style="padding-left:4%"></p></td>
+     <th style="width:45%">Login As:</th>
+   </tr>
+   <tr>
+     <td> 
+            
+                  <div class="form-group">
+                  
+                   <label for="username">Username</label>
+                      <input type="text" class="form-control" id="uName" name="username" ngModel required>
+                  </div>
+            </td>
+            <td> <p style="padding-left:1cm"></p></td>
+            <td>  <input type="radio" value="1" name="adminTitle" checked="checked" ngModel>&nbsp;<label>Administrator</label><br>
+                  <input type="radio" value="2" name="adminTitle" ngModel>&nbsp;<label>Manager</label><br>
+                  <input type="radio" value="3" name="adminTitle" ngModel>&nbsp;<label>Trainer</label>
+              </td>
+       </tr>
+       <tr>
+             <td>     <div class="form-group">
+                    <label for="pwd">Password:</label>
+                      <input type="password" class="form-control" id="pwd" name="password" ngModel required>
+                  </div>
+              </td>
+              <td><p style="padding-left:2%"></p></td>
+              <td> </td>
+         </tr>
+         <tr>
+              <td>
+                   <button type="submit" class="btn btn-default" >LOG IN</button>
+                 <br>
+                <a href="#"><span>Forget Username/Password?</span> </a>
+              </td>
+              <td><p style="padding-left:2%"></p></td>
+              <td>   </td>
+          </tr>
+          
+   
+ </table>
+  </form>  
+  </div>
+  
