@@ -46,4 +46,6 @@ export class AppointmentsComponent implements OnInit {
 				console.log(this.appointments);
 			})
   }
+
+  submit(){}
 }
