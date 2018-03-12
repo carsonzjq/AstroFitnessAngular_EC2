@@ -13,7 +13,7 @@ import {ForumPageComponent} from '../forum-page/forum-page.component';
 export class ClientPageComponent implements OnInit {
 
 	client = new Client();
-	url = "http://54.144.236.210:8085/AstroFitness/rest/client/getByEmail/" + sessionStorage.getItem("userEmail");
+	url = "http://54.167.6.110:8085/AstroFitness/rest/client/getByEmail/" + sessionStorage.getItem("userEmail");
 
 	constructor(private user: UserService, private http: HttpClient) { }
 

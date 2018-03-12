@@ -11,7 +11,7 @@ import { Trainer } from '../trainer';
 export class TrainerPageComponent implements OnInit {
 
 	trainer = new Trainer();
-	url = "http://54.144.236.210:8085/AstroFitness/rest/trainer/getByEmail/" + sessionStorage.getItem("userEmail");
+	url = "http://54.167.6.110:8085/AstroFitness/rest/trainer/getByEmail/" + sessionStorage.getItem("userEmail");
 
 	constructor(private user: UserService, private http: HttpClient) { }
 

@@ -1,26 +1,57 @@
 <div class="jumbotron text-center" style="background-color:#7BD5C6">
-  <div><h2>You are signed up for the following appointments:</h2></div>
-  
+  <div><h2 style="color:white">Training Schedule for all clients and trainers:</h2></div>
+  <table>
+      <tr>
+        <td><h3 style="color:white">Trainer</h3></td>
+        <td><h3 style="color:white">Trainee</h3></td>
+        <td><h3 style="color:white">Time/Day</h3></td>
+      </tr>
+    <tr *ngFor="let app of appointments">
+        <td><h3 style="color:white">  {{ app.trainer_name}}  </h3></td>
+      <td><h3 style="color:white">  {{ app.client_name }}  </h3></td>
+      <td><h3 style="color:white">  {{ app.day }} at {{ app.hour }}:00  </h3></td>
+    </tr>
+  </table>
 </div>
 <div class="container" style="width:500px; background-color:#7BD5C6">
   <h2 style="color:white; text-align:center">Sign up for a training session</h2>
   <form data-toggle="validator" role="form" method="POST" (ngSubmit)="submit()" #registerForm="ngForm">
     <div class="form-group">
       <label for="branch" class="control-label" style="color:white">Trainer</label>
-      <select class="form-control" id="branch" name="branch" [(ngModel)]="client.client_gym" 
-      #branch="ngModel">
-        <option *ngFor="let bran of branches" [value]="bran.id">{{bran.name}}, {{bran.address}}</option>
+      <select class="form-control" id="branch" name="branch">
+        <option *ngFor="let train of trainers" [value]="train.fname">{{train.fname}} {{train.lname}}</option>
       </select>
     </div>
     <div class="form-group">
       <label for="branch" class="control-label" style="color:white">Time</label>
       <select class="form-control" id="branch" name="branch" [(ngModel)]="client.client_gym" 
-      #branch="ngModel">
-        <option *ngFor="let bran of branches" [value]="bran.id">{{bran.name}}, {{bran.address}}</option>
+      #branch="ngModel" (change)="checkBranch()">
+        <option>9:00am</option>
+        <option>10:00am</option>
+        <option>11:00am</option>
+        <option>12:00pm</option>
+        <option>1:00pm</option>
+        <option>2:00pm</option>
+        <option>3:00pm</option>
+        <option>4:00pm</option>
+        <option>5:00pm</option>
       </select>
     </div>
+    <div class="form-group">
+        <label for="branch" class="control-label" style="color:white">Day</label>
+        <select class="form-control" id="branch" name="branch" [(ngModel)]="client.client_gym" 
+        #branch="ngModel" (change)="checkBranch()">
+        <option>Sunday</option>
+        <option>Monday</option>
+        <option>Tuesday</option>
+        <option>Wednesday</option>
+        <option>Thursday</option>
+        <option>Friday</option>
+        <option>Saturday</option>
+        </select>
+      </div>
     <div class="form-group">  <!-- submit -->
-      <button type="submit" class="btn btn-default" [disabled]="!registerForm.form.valid">Submit</button>
+      <button type="submit" class="btn btn-default" (click)="check()" [disabled]="!registerForm.form.valid">Submit</button>
     </div>
   </form>
 </div>

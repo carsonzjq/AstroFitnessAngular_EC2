@@ -24,7 +24,7 @@ export class SignUpComponent implements OnInit {
 	}
 
 	fetchGyms(){
-		this.url="http://54.144.236.210:8085/AstroFitness/rest/gym/get/all";
+		this.url="http://54.167.6.110:8085/AstroFitness/rest/gym/get/all";
 		this.http.get(this.url).subscribe(
 			data => {
 				this.branches = data;
@@ -50,7 +50,7 @@ export class SignUpComponent implements OnInit {
 				}
 			}
 		
-			this.url = "http://54.144.236.210:8085/AstroFitness/rest/client/post/newClient";
+			this.url = "http://54.167.6.110:8085/AstroFitness/rest/client/post/newClient";
 			this.http.post(this.url, this.newUser).subscribe(
 				data => {
 					console.log(data);

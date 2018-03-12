@@ -17,7 +17,7 @@ export class UserService {
 	}
 
 	loginClient(email: string, password: string){
-		this.authURL = "http://54.144.236.210:8085/AstroFitness/rest/client/authenticate";
+		this.authURL = "http://54.167.6.110:8085/AstroFitness/rest/client/authenticate";
 		var client = new Client();
 		client.email = email;
 		client.password = password;
@@ -26,7 +26,7 @@ export class UserService {
 	}
 
 	loginTrainer(email: string, password: string){
-		this.authURL = "http://54.144.236.210:8085/AstroFitness/rest/trainer/authenticate";
+		this.authURL = "http://54.167.6.110:8085/AstroFitness/rest/trainer/authenticate";
 		var trainer = new Trainer();
 		trainer.email = email;
 		trainer.password = password;
@@ -35,7 +35,7 @@ export class UserService {
 	}
 
 	loginManager(email: string, password: string){
-		this.authURL = "http://54.144.236.210:8085/AstroFitness/rest/manager/authenticate";
+		this.authURL = "http://54.167.6.110:8085/AstroFitness/rest/manager/authenticate";
 		var manager = new Manager();
 		manager.email = email;
 		manager.password = password;

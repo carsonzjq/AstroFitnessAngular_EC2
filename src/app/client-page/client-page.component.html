@@ -1,25 +1,16 @@
 
 <div class="jumbotron text-center" style="background-color:#7BD5C6">
-		<div><h1>Firstname: {{client.fname}}</h1></div>
-		<div><h1>Lastname: {{client.lname}}</h1></div>
-		<div><h1>Address: {{client.address}}</h1></div>
-		<div><h1>email: {{client.email}}</h1></div>
+		<div><h2 style="color:white">Firstname: {{client.fname}}</h2></div>
+		<div><h2 style="color:white">Lastname: {{client.lname}}</h2></div>
+		<div><h2 style="color:white">Address: {{client.address}}</h2></div>
+		<div><h2 style="color:white">email: {{client.email}}</h2></div>
 </div>
 <div class="row">
-	<div class="col-sm-3">
-		<ul style="list-style-type: none">
-			<li>
-				<a>make an appointment </a>
-			</li>
-		</ul>
-	</div>
-	<div class="col-sm-5">
+	<div class="col-sm-4"></div>
+	<div class="col-sm-4">
 			<app-appointments></app-appointments>
-	
 	</div>
-	
 	<div class="col-sm-4">
 			<app-forum-page></app-forum-page>
-	
-		</div>
+	</div>
 </div>

@@ -8,8 +8,8 @@ import { UserService } from '../user.service';
 })
 export class HeaderComponent implements OnInit {
 
-	loggedIn;
-	accountType;
+	private loggedIn;
+	private accountType;
 
 	constructor(private user: UserService) { 
 		this.loggedIn = this.user.getLoggedIn();

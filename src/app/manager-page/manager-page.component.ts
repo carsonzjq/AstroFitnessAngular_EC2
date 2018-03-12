@@ -11,7 +11,7 @@ import { Manager } from '../manager';
 export class ManagerPageComponent implements OnInit {
 
 	manager = new Manager();
-	url = "http://54.144.236.210:8085/AstroFitness/rest/manager/getByEmail/" + sessionStorage.getItem("userEmail");
+	url = "http://54.167.6.110:8085/AstroFitness/rest/manager/getByEmail/" + sessionStorage.getItem("userEmail");
 
 	constructor(private user: UserService, private http: HttpClient) { }
 

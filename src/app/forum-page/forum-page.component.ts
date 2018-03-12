@@ -24,7 +24,7 @@ export class ForumPageComponent implements OnInit {
 	constructor(private http: HttpClient){}
 
 	fetchForum(){
-		this.url="http://54.144.236.210:8085/AstroFitness/rest/forum/get/all";
+		this.url="http://54.167.6.110:8085/AstroFitness/rest/forum/get/all";
 		this.http.get(this.url).subscribe(
 			data => {
 				this.posts = data;
@@ -39,7 +39,7 @@ export class ForumPageComponent implements OnInit {
 		this.formatDate();
 		this.newForum.comment_time = new Date().toLocaleTimeString().slice(0,7);
 		this.fetchForum();
-		this.url = "http://54.144.236.210:8085/AstroFitness/rest/forum/post/newForum";
+		this.url = "http://54.167.6.110:8085/AstroFitness/rest/forum/post/newForum";
 		this.http.post(this.url, this.newForum).subscribe(
 			data => {
 				console.log(data);

@@ -26,7 +26,7 @@ export class TrainerApplicationComponent implements OnInit {
 	}
 
 	fetchGyms(){
-		this.url="http://54.144.236.210:8085/AstroFitness/rest/gym/get/all";
+		this.url="http://54.167.6.110:8085/AstroFitness/rest/gym/get/all";
 		this.http.get(this.url).subscribe(
 			data => {
 				this.branches = data;
@@ -43,7 +43,7 @@ export class TrainerApplicationComponent implements OnInit {
 				}
 			}
 
-			this.url = "http://54.144.236.210:8085/AstroFitness/rest/trainer/post/newTrainer";
+			this.url = "http://54.167.6.110:8085/AstroFitness/rest/trainer/post/newTrainer";
 			this.http.post(this.url, this.newUser).subscribe(
 				data => {
 					console.log(data);
@@ -51,7 +51,7 @@ export class TrainerApplicationComponent implements OnInit {
 				error => {
 					console.log(error);
 				}
-				)
+			)
 				this.router.navigate(['user-login']);
 		} else {
 			this.passwords_are_different = true;

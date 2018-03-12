@@ -1,16 +1,24 @@
-<div class="jumbotron text-center" style="background-color:#7BD5C6">
-  <table>
-    <tr>
-      <th>Time</th>
-      <th>Post</th>
-    </tr>
-    <tr *ngFor="let post of posts">
-      <td>{{ post.comment_date }} at {{post.comment_time}}</td>
-      <td>{{ post.forum_comment }}</td>
-    </tr>
-  </table>
-  <form data-toggle="validator" role="form" method="POST" (ngSubmit)="submit()" #registerForm="ngForm" >
-    <input type="text" placeholder="Comment" required [(ngModel)]="newForum.forum_comment" id="forum_comment" name="forum_comment">
+<div class="jumbotron text-center" style="background-color:#7BD5C6; height:85%" >
+    <div class="chat_list" class="pre-scrollable">
+        <ul class="list-group" *ngFor="let post of posts">
+            <li class="list-group-item">
+                <small class="pull-right text-muted">{{ post.comment_date }} at {{post.comment_time}}</small>
+                <div>
+                    <small class="list-group-item-heading text-muted text-primary">posted</small>
+                    <p class="list-group-item-text">
+                        {{ post.forum_comment }} 
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+      
+  <form  data-toggle="validator" role="form" method="POST" (ngSubmit)="submit()" #registerForm="ngForm" >
+    <textarea rows="3" cols="40" type="text" placeholder="Comment" required [(ngModel)]="newForum.forum_comment" id="forum_comment" name="forum_comment"></textarea>
     <input type="submit" value="Submit">
   </form>
 </div>
+
+
+
